@@ -1,0 +1,238 @@
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  background: #f8f9fa;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(73,80,87,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(108,117,125,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(134,142,150,0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* AI Engineering Theme - Neural Network Background */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(73,80,87,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73,80,87,0.02) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(108,117,125,0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(134,142,150,0.02) 0%, transparent 50%);
+  background-size: 50px 50px, 50px 50px, 200px 200px, 300px 300px;
+  animation: matrix-flow 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass { 
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(73,80,87,0.2);
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.cyber-border {
+  position: relative;
+  border: 1px solid rgba(73,80,87,0.3);
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #495057, #6c757d, #868e96, #adb5bd);
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.2;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* AI Engineering Theme - Circuit Board Effect */
+.cyber-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(73,80,87,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(108,117,125,0.05) 0%, transparent 50%);
+  opacity: 0.4;
+  animation: circuit-pulse 4s ease-in-out infinite;
+}
+
+.dot { 
+  width: 8px; 
+  height: 8px; 
+  border-radius: 50%; 
+  display: inline-block;
+  box-shadow: 0 0 10px currentColor;
+  animation: data-pulse 2s ease-in-out infinite;
+}
+
+/* AI Engineering Theme - Data Flow Effect */
+.dot::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: data-expand 2s ease-in-out infinite;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #495057, transparent);
+  animation: scan 3s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+  color: #495057;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 3s infinite linear alternate-reverse;
+  color: #6c757d;
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0) }
+  20% { transform: translate(2px, -2px) }
+  40% { transform: translate(2px, 2px) }
+  60% { transform: translate(-2px, -2px) }
+  80% { transform: translate(-2px, 2px) }
+}
+
+/* AI Engineering Theme - New Animations */
+@keyframes matrix-flow {
+  0% { transform: translateY(0px) }
+  100% { transform: translateY(-50px) }
+}
+
+@keyframes circuit-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1) }
+  50% { opacity: 0.8; transform: scale(1.02) }
+}
+
+@keyframes data-pulse {
+  0%, 100% { transform: scale(1); opacity: 1 }
+  50% { transform: scale(1.2); opacity: 0.8 }
+}
+
+@keyframes data-expand {
+  0% { transform: scale(1); opacity: 0.5 }
+  100% { transform: scale(2); opacity: 0 }
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%) }
+  100% { transform: translateX(100%) }
+}
+
+@keyframes glow {
+  0% { boxShadow: 0 0 20px rgba(73,80,87,0.3) }
+  100% { boxShadow: 0 0 30px rgba(73,80,87,0.5), 0 0 40px rgba(73,80,87,0.2) }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) }
+  50% { transform: translateY(-10px) }
+}
+
+.matrix-bg {
+  background-image: 
+    linear-gradient(rgba(73,80,87,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73,80,87,0.04) 1px, transparent 1px),
+    radial-gradient(circle at 10% 10%, rgba(108,117,125,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, rgba(134,142,150,0.03) 0%, transparent 50%);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 150px 150px;
+  animation: matrix-flow 30s linear infinite;
+}
+
+/* AI Engineering Theme - Neural Network Nodes */
+.neural-node {
+  position: relative;
+}
+
+.neural-node::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 1px solid rgba(73,80,87,0.15);
+  border-radius: 50%;
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neural-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.1 }
+  50% { transform: scale(1.05); opacity: 0.2 }
+}
