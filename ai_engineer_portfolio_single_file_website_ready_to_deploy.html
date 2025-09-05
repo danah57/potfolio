@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danah Safwat Sobhy — Software Engineer Student & AI </title>
+  <meta name="description" content="Final-year Computer Science student specializing in Generative AI, machine learning, and full-stack development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 
+            mono: ['Orbitron', 'monospace'],
+            sans: ['Exo 2', 'system-ui', 'sans-serif'] 
+          },
+          colors: {
+            base: '#f8f9fa',
+            dark: '#e9ecef',
+            soft: '#dee2e6',
+            accent: '#495057',
+            neon: '#6c757d',
+            cyber: '#868e96',
+            glow: '#adb5bd',
+            dim: '#ced4da'
+          },
+          boxShadow: {
+            'neon': '0 0 20px rgba(73,80,87,0.3)',
+            'neon-pink': '0 0 20px rgba(108,117,125,0.3)',
+            'neon-blue': '0 0 20px rgba(134,142,150,0.3)',
+            'glow': '0 0 30px rgba(73,80,87,0.2)',
+            'dark-glow': '0 0 40px rgba(0,0,0,0.1)'
+          },
+          animation: {
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'scan': 'scan 3s linear infinite'
+          },
+          keyframes: {
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(73,80,87,0.3)' },
+              '100%': { boxShadow: '0 0 30px rgba(73,80,87,0.5), 0 0 40px rgba(73,80,87,0.2)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            scan: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-base text-accent font-sans">
+  <!-- Nav -->
+        <header class="sticky top-0 z-50 glass border-b border-accent/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+              <a href="#" class="font-black tracking-wider text-accent text-xl font-mono neon-text">DS<span class="text-neon">_</span>AI</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-neon transition-colors duration-300">ABOUT</a>
+        <a href="#skills" class="hover:text-neon transition-colors duration-300">SKILLS</a>
+        <a href="#projects" class="hover:text-neon transition-colors duration-300">PROJECTS</a>
+        <a href="#services" class="hover:text-neon transition-colors duration-300">SERVICES</a>
+        <a href="#blog" class="hover:text-neon transition-colors duration-300">BLOG</a>
+        <a href="#contact" class="hover:text-neon transition-colors duration-300">CONTACT</a>
+      </nav>
+              <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-accent/10 hover:bg-accent/20 transition-all duration-300 border border-accent/50 hover:border-accent text-sm font-mono hover:shadow-neon">
+          HIRE_ME
+        </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="scan-line"></div>
+          <div class="absolute -inset-40 -z-10 opacity-20 pointer-events-none" aria-hidden>
+        <div class="w-[1200px] h-[1200px] bg-gradient-to-tr from-accent/10 via-neon/10 to-transparent rounded-full blur-3xl mx-auto"></div>
+      </div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-accent/80 font-mono">
+          <span class="dot bg-accent animate-pulse"></span> AI_STUDENT_AVAILABLE
+        </span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-black leading-tight text-accent font-mono">
+                    <span class="text-cyber" data-text="Hi, I'm Danah">Hi, I'm <span class="text-neon">Danah</span></span><br class="hidden md:block"/>
+          <h2>
+            <span class="text-cyber">COMPUTER_SCIENCE</span><br class="hidden md:block"/>
+            <span class="text-glow">AI_ENGINEER</span>
+          </h2>
+        </h1>
+        <p class="mt-4 text-neon/80 max-w-prose font-sans">AI enthusiast passionate about Generative AI with a solid background in software</p>
+        <div class="mt-6 flex flex-wrap gap-3 relative z-10">
+          <a href="#projects" onclick="console.log('VIEW_PROJECTS clicked')" class="px-5 py-3 rounded-none bg-accent text-black font-bold hover:bg-neon transition-all duration-300 border border-accent hover:shadow-neon font-mono cursor-pointer">
+            VIEW_PROJECTS
+          </a>
+          <a href="./Danah CV.pdf" download="Danah_Safwat_CV.pdf" onclick="console.log('DOWNLOAD_RESUME clicked')" class="px-5 py-3 rounded-none bg-transparent text-accent hover:bg-accent/10 transition-all duration-300 border border-accent/50 hover:border-accent font-mono cursor-pointer">
+            DOWNLOAD_RESUME
+          </a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-accent/60 text-sm font-mono">
+          <span class="inline-flex items-center gap-2">
+            <span class="dot bg-accent animate-pulse"></span>AVAILABLE
+          </span>
+          <span>6TH OCTOBER, GIZA </span>
+        </div>
+      </div>
+              <div class="relative">
+          <div class="w-80 h-80 rounded-none cyber-border shadow-neon p-2 animate-float neural-node">
+            <img alt="Danah Safwat - AI Engineer" src="./photos/photo2.jpg" class="w-full h-full object-cover"/>
+            <!-- AI Engineering Theme - Scanning Effect -->
+            <div class="scan-line"></div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-dark/90 border border-accent/30 rounded-none p-4 text-xs backdrop-blur glass">
+            <div class="font-bold text-accent">TECH_STACK</div>
+            <div class="mt-1 text-neon/70 font-mono">Python • TensorFlow • Scikit-learn • Java • C • .NET Core</div>
+          </div>
+          <!-- AI Engineering Theme - Floating Data Points -->
+          <div class="absolute -top-2 -right-2 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+          <div class="absolute top-1/4 -right-4 w-2 h-2 bg-neon rounded-full animate-pulse-slow"></div>
+          <div class="absolute bottom-1/4 -right-2 w-2.5 h-2.5 bg-cyber rounded-full animate-float"></div>
+        </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 border-t border-accent/20 bg-soft/50 matrix-bg">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">ABOUT</h2>
+        <!--<p class="mt-2 text-accent/60 font-mono">COMPUTER_SCIENCE_STUDENT_&_AI_ENTHUSIAST</p>-->
+      </div>
+      <div class="md:col-span-2 space-y-4 text-neon/80">
+        <p>Hi, I’m Danah — an AI enthusiast with a strong focus on Generative AI and its real-world applications. I enjoy turning complex ideas into simple, practical solutions using artificial intelligence. With a background in software engineering, I bridge the gap between coding fundamentals and innovative AI projects.</p>
+        <p>  Here, you’ll find some of my projects, from prediction models to intelligent applications, each reflecting my passion for creating technology that’s not only smart but also impactful.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">Python</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">Java</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">C</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">.NET</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">TensorFlow</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">Scikit-learn</span>
+          <span class="px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono">NumPy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">TECHNICAL_SKILLS</h2>
+      <p class="text-accent/60 font-mono">PROGRAMMING_&_AI_DEVELOPMENT_SKILLS</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node">
+          <h3 class="font-bold text-accent font-mono">Programming Languages</h3>
+          <ul class="mt-3 space-y-1 text-neon/70 text-sm list-disc list-inside">
+            <li>Python - AI/ML Development</li>
+            <li>Java - Object-Oriented Programming</li>
+            <li>C - Low-level Programming</li>
+          </ul>
+          <!-- AI Engineering Theme - Neural Network Visualization -->
+          <div class="mt-4 flex justify-center space-x-1">
+            <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <div class="w-2 h-2 bg-neon rounded-full animate-pulse-slow"></div>
+            <div class="w-2 h-2 bg-cyber rounded-full animate-pulse"></div>
+          </div>
+        </div>
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node">
+          <h3 class="font-bold text-accent font-mono">Web Development</h3>
+          <ul class="mt-3 space-y-1 text-neon/70 text-sm list-disc list-inside">
+            <li>HTML, CSS, JavaScript</li>
+            <li>React.js Frontend</li>
+            <li>.NET Core Backend</li>
+          </ul>
+          <!-- AI Engineering Theme - Neural Network Visualization -->
+          <div class="mt-4 flex justify-center space-x-1">
+            <div class="w-2 h-2 bg-accent rounded-full animate-pulse-slow"></div>
+            <div class="w-2 h-2 bg-neon rounded-full animate-pulse"></div>
+            <div class="w-2 h-2 bg-cyber rounded-full animate-pulse-slow"></div>
+          </div>
+        </div>
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node">
+          <h3 class="font-bold text-accent font-mono">AI & Machine Learning</h3>
+          <ul class="mt-3 space-y-1 text-neon/70 text-sm list-disc list-inside">
+            <li>TensorFlow & Scikit-learn</li>
+            <li>NumPy, Pandas, Matplotlib</li>
+            <li>Generative AI Models</li>
+          </ul>
+          <!-- AI Engineering Theme - Neural Network Visualization -->
+          <div class="mt-4 flex justify-center space-x-1">
+            <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <div class="w-2 h-2 bg-neon rounded-full animate-pulse-slow"></div>
+            <div class="w-2 h-2 bg-cyber rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 md:py-24 border-t border-accent/20 bg-soft/50 matrix-bg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">PROJECTS</h2>
+          <p class="text-accent/60 font-mono">WEB_DEVELOPMENT_&_MACHINE_LEARNING</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <button data-filter="all" class="filter-btn px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono hover:bg-accent/20">ALL</button>
+          <button data-filter="web" class="filter-btn px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono hover:bg-accent/20">WEB_APPS</button>
+          <button data-filter="ml" class="filter-btn px-3 py-1 rounded-none bg-accent/10 border border-accent/30 font-mono hover:bg-accent/20">MACHINE_LEARNING</button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+
+        <article class="project card p-4 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node" data-tags="ml">
+          <img src="./photos/weather_prediction.png" alt="Weather Prediction" class="aspect-video object-cover"/>
+          <div class="mt-3 flex items-center gap-2 text-[11px] text-accent/60">
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">Python</span>
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">Rnadom Forest</span>
+          </div>
+          <h3 class="mt-2 font-bold text-accent font-mono">Weather Prediction</h3>
+          <p class="text-sm text-neon/70">Machine learning model that predicts weather based on historical data.</p>
+       
+          <div class="mt-3 flex items-center gap-2">
+            <div class="w-2 h-2 bg-neon rounded-full animate-pulse"></div>
+            <span class="text-xs text-accent/60 font-mono">ML_MODEL_ACTIVE</span>
+          </div>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a href="https://github.com/danah57/weather_predaction_model" target="_blank" rel="noopener noreferrer" onclick="console.log('Weather GitHub clicked')" class="underline underline-offset-4 text-cyber hover:text-cyber/80 cursor-pointer font-bold">GitHub</a>
+          </div>
+        </article>
+                <article class="project card p-4 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node" data-tags="web">
+          <img src="./photos/tour_management_system.png" alt="Tour Management System" class="aspect-video object-cover"/>
+          <div class="mt-3 flex items-center gap-2 text-[11px] text-accent/60">
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">React.js</span>
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">.NET Core</span>
+          </div>
+          <h3 class="mt-2 font-bold text-accent font-mono">Tour Management System</h3>
+          <p class="text-sm text-neon/70">Full-stack web application for managing tours, bookings, and customer interactions with REST API.</p>
+          <!-- AI Engineering Theme - Project Status Indicator -->
+          <div class="mt-3 flex items-center gap-2">
+            <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <span class="text-xs text-accent/60 font-mono">WEB_APP_COMPLETE</span>
+          </div>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a href="https://github.com/danah57" target="_blank" rel="noopener noreferrer" onclick="console.log('Tour GitHub clicked')" class="underline underline-offset-4 text-cyber hover:text-cyber/80 cursor-pointer font-bold">GitHub</a>
+          </div>
+        </article>
+
+                <article class="project card p-4 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300 neural-node" data-tags="ml">
+          <img src="./photos/heart_attack.png" alt="Heart Attack Detection" class="aspect-video object-cover"/>
+          <div class="mt-3 flex items-center gap-2 text-[11px] text-accent/60">
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">Python</span>
+            <span class="px-2 py-0.5 rounded-none bg-accent/10 border border-accent/30 font-mono">Scikit-learn</span>
+          </div>
+          <h3 class="mt-2 font-bold text-accent font-mono">Heart Attack Detection</h3>
+          <p class="text-sm text-neon/70">Machine learning model for Heart Attack Detection using scikit-learn, pandas, and numpy for data analysis.</p>
+          <!-- AI Engineering Theme - Project Status Indicator -->
+          <div class="mt-3 flex items-center gap-2">
+            <div class="w-2 h-2 bg-cyber rounded-full animate-pulse"></div>
+            <span class="text-xs text-accent/60 font-mono">ML_MODEL_ACTIVE</span>
+          </div>
+                      <div class="mt-3 flex gap-3 text-sm">
+             <a href="https://github.com/danah57/heart_attack_detection" target="_blank" rel="noopener noreferrer" onclick="console.log('Heart Attack GitHub clicked')" class="underline underline-offset-4 text-cyber hover:text-cyber/80 cursor-pointer font-bold">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">SERVICES</h2>
+      <p class="text-accent/60 font-mono">WEB_DEVELOPMENT_&_AI_SOLUTIONS</p>
+      <div class="mt-8 grid md:grid-cols-4 sm:grid-cols-2 gap-6">
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">Machine Learning</h3>
+          <p class="mt-2 text-sm text-neon/70">Custom ML models for classification, prediction, and data analysis using Python.</p>
+        </div>
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">Data Analysis</h3>
+          <p class="mt-2 text-sm text-neon/70">Data processing, visualization, and statistical analysis using pandas, numpy, and matplotlib.</p>
+        </div>
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">AI Training</h3>
+          <p class="mt-2 text-sm text-neon/70">Generative AI model development and training using TensorFlow and scikit-learn.</p>
+        </div>
+        <div class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">Full-Stack Development</h3>
+          <p class="mt-2 text-sm text-neon/70">Complete web applications using React.js frontend and .NET Core backend with REST APIs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-16 md:py-24 border-t border-accent/20 bg-soft/50 matrix-bg">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">TRAINING_&_CERTIFICATIONS</h2>
+      <p class="text-accent/60 font-mono">AI_PROGRAMS_&_DEVELOPMENT_COURSES</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+        <article class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">Digital Egypt Pioneers Initiative</h3>
+          <p class="mt-1 text-neon/70">MCIT Generative AI track with global tech companies. July 2025 - December 2025.</p>
+          <span class="mt-3 inline-block text-cyber font-mono">MCIT</span>
+        </article>
+        <article class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">AI & ML Summer Camp</h3>
+          <p class="mt-1 text-neon/70">Sprints collaboration with Microsoft. August 2025 - October 2025.</p>
+          <span class="mt-3 inline-block text-cyber font-mono">Microsoft</span>
+        </article>
+        <article class="p-6 rounded-none cyber-border bg-dark/50 hover:shadow-neon transition-all duration-300">
+          <h3 class="font-bold text-accent font-mono">AI Training Program</h3>
+          <p class="mt-1 text-neon/70">BUE AI foundations and machine learning. January 2025 - February 2025.</p>
+          <span class="mt-3 inline-block text-cyber font-mono">BUE</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-accent font-mono">LET'S_BUILD_SOMETHING</h2>
+      <p class="text-neon/70 mt-2 font-sans">Email me for roles, collaborations, or freelance work. I respond within 24–48 hours.</p>
+      <div class="mt-6 space-y-2 text-sm">
+        <div><span class="text-accent/60">Email:</span> <a href="mailto:danahsafwat@gmail.com" class="underline underline-offset-4 text-cyber hover:text-cyber/80">danahsafwat@gmail.com</a></div>
+        <div><span class="text-accent/60">GitHub:</span> <a href="https://github.com/danah57" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-cyber hover:text-cyber/80">github.com/danah57</a></div>
+        <div><span class="text-accent/60">LinkedIn:</span> <a href="https://linkedin.com/in/danah-safwat" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-cyber hover:text-cyber/80">linkedin.com/in/danah-safwat</a></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-accent/20 text-center text-accent/70 text-sm font-mono">
+    © <span id="year"></span> Danah Safwat Sobhy — Computer Science Student & AI Enthusiast. Built with neural networks & coffee.
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal1" class="hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-black/80">
+    <div class="max-w-2xl w-full rounded-none bg-dark border border-blue-400/30 p-6 cyber-border">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-lg font-bold text-blue-400 font-mono">Tour Management System — Case Study</h3>
+        <button onclick="closeModal('modal1')" class="text-blue-400/60 hover:text-blue-400">✕</button>
+      </div>
+      <ol class="mt-4 text-sm text-blue-300/80 list-decimal list-inside space-y-2">
+        <li><strong>Problem:</strong> Create a comprehensive system for managing tours, bookings, and customer interactions.</li>
+        <li><strong>Approach:</strong> Full-stack web application with React.js frontend and .NET Core backend.</li>
+        <li><strong>Stack:</strong> React.js, .NET Core, C#, SQL Server, REST API.</li>
+        <li><strong>Outcome:</strong> Complete tour management solution with booking system and customer portal.</li>
+      </ol>
+    </div>
+  </div>
+  <div id="modal2" class="hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-black/80">
+    <div class="max-w-2xl w-full rounded-none bg-dark border border-blue-400/30 p-6 cyber-border">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-lg font-bold text-blue-400 font-mono">Fake Account Detection — Case Study</h3>
+        <button onclick="closeModal('modal2')" class="text-blue-400/60 hover:text-blue-400">✕</button>
+      </div>
+      <ol class="mt-4 text-sm text-blue-300/80 list-decimal list-inside space-y-2">
+        <li><strong>Problem:</strong> Identify fake social media accounts using machine learning.</li>
+        <li><strong>Approach:</strong> Analyze user data patterns and profile information to train ML model.</li>
+        <li><strong>Stack:</strong> Python, Pandas, scikit-learn, NumPy.</li>
+        <li><strong>Outcome:</strong> Accurate classification model for detecting fake accounts.</li>
+      </ol>
+    </div>
+  </div>
+  <div id="modal3" class="hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-black/80">
+    <div class="max-w-2xl w-full rounded-none bg-dark border border-blue-400/30 p-6 cyber-border">
+      <div class="flex items-start justify-between gap-4">
+        <h3 class="text-lg font-bold text-blue-400 font-mono">Disease/Cancer Detection — Case Study</h3>
+        <button onclick="closeModal('modal3')" class="text-blue-400/60 hover:text-blue-400">✕</button>
+      </div>
+      <ol class="mt-4 text-sm text-blue-300/80 list-decimal list-inside space-y-2">
+        <li><strong>Problem:</strong> Develop machine learning model for medical diagnosis and disease detection.</li>
+        <li><strong>Approach:</strong> Use medical data to train classification models for disease prediction.</li>
+        <li><strong>Stack:</strong> Python, scikit-learn, Pandas, NumPy, Matplotlib.</li>
+        <li><strong>Outcome:</strong> Accurate disease detection model for medical applications.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project');
+    filterButtons.forEach(btn => btn.addEventListener('click', () => {
+      const tag = btn.getAttribute('data-filter');
+      cards.forEach(c => {
+        const tags = c.getAttribute('data-tags');
+        const show = tag === 'all' || tags.includes(tag);
+        c.style.display = show ? '' : 'none';
+      });
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-accent','text-black');
+        b.classList.add('bg-accent/10', 'border-accent/30');
+      });
+      btn.classList.remove('bg-accent/10', 'border-accent/30');
+      btn.classList.add('bg-accent','text-black');
+    }));
+
+    // Simple modals
+    function openModal(id){
+      const el = document.getElementById(id);
+      el.classList.remove('hidden');
+      el.classList.add('flex');
+    }
+    function closeModal(id){
+      const el = document.getElementById(id);
+      el.classList.add('hidden');
+      el.classList.remove('flex');
+    }
+    window.openModal = openModal; window.closeModal = closeModal;
+
+    // Add some cyberpunk effects
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add glitch effect to random elements
+      const glitchElements = document.querySelectorAll('h1, h2, h3');
+      setInterval(() => {
+        const randomElement = glitchElements[Math.floor(Math.random() * glitchElements.length)];
+        randomElement.classList.add('glitch');
+        setTimeout(() => {
+          randomElement.classList.remove('glitch');
+        }, 200);
+      }, 5000);
+
+      // Debug GitHub links
+      const githubLinks = document.querySelectorAll('a[href*="github.com"]');
+      githubLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          console.log('GitHub link clicked:', this.href);
+          e.preventDefault(); // Prevent default behavior
+          // Force open the link
+          window.open(this.href, '_blank', 'noopener,noreferrer');
+        });
+   
+        link.addEventListener('mousedown', function(e) {
+          console.log('GitHub link mousedown:', this.href);
+        });
+      });
+   
+      document.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          console.log('Any link clicked:', e.target.href);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
